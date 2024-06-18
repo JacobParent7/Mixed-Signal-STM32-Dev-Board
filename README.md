@@ -10,5 +10,5 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - USB - <500mA current consumption 
     - Low Frequency - 20Hz - 20kHz (audio band)
     - ADC and DAC (or codec) for analysis and generation, single channel 
-    ![image](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/0fca3039-6d29-47f8-92e5-154105758778)
-
+    
+![SimpleBlockDiagram](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/2797847b-17f6-4e3c-a1bc-c3d00f2641d9)
