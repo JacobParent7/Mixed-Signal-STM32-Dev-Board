@@ -22,3 +22,11 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - High Speed - Up to 480 Mbits/s
     - System is bus powered (not a host) and will most likely require <500mA
     - Use type C, new universal standard
+### Processor
+    - Low bandwidth and storage requirements so FPGA unnecessary
+    - Use MCU
+        - C easy compared to Verilog
+        - SWD or JTAG protocols available 
+    - Peripherals
+        - USB for data stream
+        - SPI for ADC and DAC
