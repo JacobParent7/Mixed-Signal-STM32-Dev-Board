@@ -78,5 +78,5 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
         - EMC filtering
         - Biasing for analog circuitry 
 ### Final Block Diagram
-![finalblockdiagram](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/4b08a638-f145-4085-9349-844bb30d0599)
+![finalblockdiagram](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/181c12c9-489a-4f1e-a7fd-d23f484d2fbb)
 
