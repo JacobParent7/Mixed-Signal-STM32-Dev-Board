@@ -17,6 +17,8 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - Sample at Nyquist limit (40kHz)
     - Choose higher resolution ADC to minimize quantisation error
 ![datarate](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/e2f4f8e3-7ad7-4880-bcec-dd1402deb6ed)
-### USB 2.0
+### USB Standard
     - Full Speed - Up to 12 Mbits/s (this is plenty enough)
     - High Speed - Up to 480 Mbits/s
+    - System is bus powered (not a host) and will most likely require <500mA
+    - Use type C, new universal standard
