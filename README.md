@@ -31,8 +31,8 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
         - USB for data stream
         - SPI for ADC and DAC
     - Required Power?
-        - Cortex M0 should be adaquate 
-        - Avoid BGA or QFN packages (too expensive and not necessary) 
+        - Cortex M0 should be adequate 
+        - Avoid BGA or QFN packages (too expensive and benefits not necessary for our use case) 
         - I know STM32 platform well
 ### PSU
     - Digital Circuitry Supply
