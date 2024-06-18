@@ -30,3 +30,23 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - Peripherals
         - USB for data stream
         - SPI for ADC and DAC
+    - Required Power?
+        - Cortex M0 should be adaquate 
+        - Avoid BGA or QFN packages (too expensive and not necessary) 
+        - I know STM32 platform well
+### PSU
+    - Digital Circuitry Supply
+        - Switch mode supply is noisy but more efficient than LDO. Works for resillient digital circuitry. 
+    - Analog Circuitry Supply
+        - LDO for low noise
+        - Less current required compared to digital circuitry typically
+    - Power from USB
+        - Must regulate due to noise
+        - +5V nominal, can drop to +4.5V
+        - 500mA can be negotiated, but 150mA is default so design for that
+
+### Converters
+    - Higher bits gives better signal to noise ratio
+    - Higher sampling rate provides less aliasing with a higher Nyquist limit, however this produces more data to store, process, and stream
+    - Consider using oversampling and antialiasing filters on the convert ICs themselves
+    - Interface with SPI since data rate is low (typical for microcontrollers)
