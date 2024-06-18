@@ -5,7 +5,7 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 ## System Level Description
   ### Basic Requirements
     - USB powered, single channel, low frequency analysis and generation capabilities
-    - Perform frequency analysis, arbitrary signal generation
+    - Perform frequency analysis and arbitrary signal generation
   ### Feature specific requirements
     - USB - <500mA current consumption 
     - Low Frequency - 20Hz - 20kHz (audio band)
