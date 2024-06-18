@@ -36,7 +36,7 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
         - I know STM32 platform well
 ### PSU
     - Digital Circuitry Supply
-        - Switch mode supply is noisy but more efficient than LDO. Works for resillient digital circuitry. 
+        - Switch mode supply is noisy but more efficient than LDO. Works for resillient digital circuitry
     - Analog Circuitry Supply
         - LDO for low noise
         - Less current required compared to digital circuitry typically
