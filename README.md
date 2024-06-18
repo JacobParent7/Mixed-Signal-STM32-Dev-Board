@@ -6,7 +6,7 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 ### Basic Requirements
     - USB powered, single channel, low frequency analysis and generation capabilities
     - Perform frequency analysis and arbitrary signal generation
-### Feature specific requirements
+### Feature Specific Requirements
     - USB - <500mA current consumption 
     - Low Frequency - 20Hz - 20kHz (audio band)
     - ADC and DAC (or codec) for analysis and generation, single channel 
@@ -45,8 +45,38 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
         - +5V nominal, can drop to +4.5V
         - 500mA can be negotiated, but 150mA is default so design for that
 
-### Converters
+### Simple Converter Theory
     - Higher bits gives better signal to noise ratio
     - Higher sampling rate provides less aliasing with a higher Nyquist limit, however this produces more data to store, process, and stream
     - Consider using oversampling and antialiasing filters on the convert ICs themselves
     - Interface with SPI since data rate is low (typical for microcontrollers)
+    
+### Analog Circuitry for Converters
+    - ADC
+        - High-impedance (don't attenuate original signal), ESD protection, RF filtering
+        - Antialiasing filter at 1/2 the sampling frequency (Nyquist Rate)
+        - Single ended vs differential compatibility
+    - DAC
+        - Low-impedance with output buffer for driving a load
+        - Antialiasing filter at 1/2 the sampling frequency (Nyquist Rate) 
+        - Single ended vs differential compatibility
+
+### Miscellaneous Requirements
+    - Mechanical Constraints
+        - PCB dimensions
+        - Mounting Holes
+        - Connector Placement
+        - Conductive Case?
+    - Connectors
+        - Debugging interface
+        - IO types (SMA, BNC)
+    - Peripherals
+        - LEDs?
+    - Other
+        - Timing
+        - ESD protection
+        - EMC filtering
+        - Biasing for analog circuitry 
+### Final Block Diagram
+![finalblockdiagram](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/e9033c2e-be31-423e-9d13-d41129c2d3d1)
+
