@@ -82,12 +82,14 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 
 ## Schematic Design - Power
 ![Screenshot 2024-06-25 211558](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/6ccfcb0e-bd3d-4ff3-be44-f1f5d88efadd)
+![Screenshot 2024-06-25 210914](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/7a85688f-cd71-4eb7-ab98-f6265286d319)
 
 ### Input Pi Filter
-![Screenshot 2024-06-25 210914](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/7a85688f-cd71-4eb7-ab98-f6265286d319)
     - The input RLC Pi filter from the USB-C has an inductor with a DC resistance of 0.15 Ohms and max DC of 0.5A
     - http://sim.okawa-denshi.jp/en/Fkeisan.htm -> Tools for filter design 
-![Screenshot 2024-06-25 211942](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/de1b405d-80ce-4dce-917f-c72f35ba7fe9)
     - Using the website, we can see the Pi Filter has a cutoff in the 1.6 MHz range. For PSU, we want to keep the cutoff high to dampen high frequency noise
     - Be careful; IC transients are hungry for high frequency current and you don't want to starve them. Cutoff only what is needed to pass EMI tests. 
+    
+![Screenshot 2024-06-25 211942](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/de1b405d-80ce-4dce-917f-c72f35ba7fe9)
+    
 
