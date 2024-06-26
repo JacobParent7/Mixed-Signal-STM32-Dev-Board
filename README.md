@@ -82,7 +82,6 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 
 ## Schematic Design - Power
 ![Screenshot 2024-06-25 211558](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/6ccfcb0e-bd3d-4ff3-be44-f1f5d88efadd)
-![Screenshot 2024-06-25 210914](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/7a85688f-cd71-4eb7-ab98-f6265286d319)
 
 ### Input Pi Filter
     - The input RLC Pi filter from the USB-C has an inductor with a DC resistance of 0.15 Ohms and max DC of 0.5A
@@ -91,5 +90,22 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - Be careful; IC transients are hungry for high frequency current and you don't want to starve them. Cutoff only what is needed to pass EMI tests. 
     
 ![Screenshot 2024-06-25 211942](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/de1b405d-80ce-4dce-917f-c72f35ba7fe9)
-    
+
+### Analog LDO regulator - HT75xx
+    - Datasheet says to use at least 10uF for input and output caps. We use 22uF to avoid issues due to tolerances and voltage derating. 
+    - Series Input resistor with at least 1/8W power rating creates low-pass filter RC with 22uF input capacitor
+    - In general, RC filters have a much shallower roll-off compared to the RLC Pi Filter. They also have significant Johnson noise. 
+    - Input low-pass has cutoff at 723 Hz. This is low but okay because it feeds a low freq analog supply. 
+
+### Buck Converter
+    - Main external circuitry
+        - Input caps
+        - Output LC filter - use below formula to calculate inductor value
+        - Delta IL is ripple current - try to get 20% - 30% of max output current
+        - Feedback network 
+        - Sometimes external FETs and diodes
+#### Choosing Inductor Value
+![Screenshot 2024-06-25 214346](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/91e6cef9-52f3-44ba-89f5-1ca48ed08062)
+  
+
 
