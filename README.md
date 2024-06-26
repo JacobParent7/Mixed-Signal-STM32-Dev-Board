@@ -81,7 +81,7 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 ![finalblockdiagram](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/48f4dbe4-663c-48d4-8cd2-4369597c9597)
 
 ## Schematic Design - Power
-![Screenshot 2024-06-25 211558](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/6ccfcb0e-bd3d-4ff3-be44-f1f5d88efadd)
+![1](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/603f80e3-1b72-454e-8f95-f3b2b249c0d8)
 
 ### Input Pi Filter
     - The input RLC Pi filter from the USB-C has an inductor with a DC resistance of 0.15 Ohms and max DC of 0.5A
@@ -101,16 +101,19 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - Main external circuitry
         - Input caps
         - Output LC filter - use below formula to calculate inductor value
-        - Feedback network 
+        - Feedback network (formula straight from datasheet and also in schematic) 
         - Sometimes external FETs and diodes
 #### Choosing Inductor Value
         - Delta IL is ripple current - try to get 20% - 30% of max output current
-        - Design for worst case (Largest inductor -> biggest Vin)
-        - Choose larger inductor than calculated for various reasons
+        - Design for worst case
+            - Larger Vin
+            - Low current loads
+        - Choosing larger inductor than initially calculated
             - +- 20% typical tolerance
             - Max DC and sat current need to be higher than what we require in our worst peak current case (250mA)
-            - Shielded vs unshielded
-        - Plotting below function in DESMOS we see lighter loads require much larger inductance (6x) what we calculated
+            - Low current loads (down to 50mA) will require larger inductors
+            - Is shielding important to us?
+        - Plotting below function in DESMOS we see lighter loads require much larger inductance (6x) what we calculated, so we chose a 68 uF inductor
         - Although datasheet says we can use 4.7uF minimum caps, we want to consolidate our BOM, so choose 22uF as required by LDO
 ![Screenshot 2024-06-25 214346](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/91e6cef9-52f3-44ba-89f5-1ca48ed08062)
   
