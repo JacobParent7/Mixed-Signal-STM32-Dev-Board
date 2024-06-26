@@ -97,13 +97,13 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - In general, RC filters have a much shallower roll-off compared to the RLC Pi Filter. They also have significant Johnson noise. 
     - Input low-pass has cutoff at 723 Hz. This is low but okay because it feeds a low freq analog supply. 
 
-### Buck Converter
+### [Buck Converter]
     - Main external circuitry
         - Input caps
         - Output LC filter - use below formula to calculate inductor value
         - Feedback network (formula straight from datasheet and also in schematic) 
         - Sometimes external FETs and diodes
-#### Choosing Inductor Value
+#### [Choosing Inductor Value]
         - Delta IL is ripple current - try to get 20% - 30% of max output current
         - Design for worst case
             - Larger Vin
@@ -115,7 +115,14 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
             - Is shielding important to us?
         - Plotting below function in DESMOS we see lighter loads require much larger inductance (6x) what we calculated, so we chose a 68 uF inductor
         - Although datasheet says we can use 4.7uF minimum caps, we want to consolidate our BOM, so choose 22uF as required by LDO
+#### [DNP???]
+    - We have a DNP (Do not place) cap because the datasheet recommends it for stability and speed
+    - We still want the option to place it, so we will put pads on the PCB for it. 
 ![Screenshot 2024-06-25 214346](https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/91e6cef9-52f3-44ba-89f5-1ca48ed08062)
-  
 
+### Bias Generator
+    - We have a single supply 0V -> 3.3 V
+    - Bias an input to 1/2 VA to give max swing potential for superimposed AC signal 
+    - Provide bypass cap as recommended by datasheet (place physically close on board)
+    - In high freq designs, the voltage and ground planes seperated by a dielectric board material create a low value high speed capacitor. 
 
