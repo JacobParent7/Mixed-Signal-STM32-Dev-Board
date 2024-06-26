@@ -97,7 +97,7 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - In general, RC filters have a much shallower roll-off compared to the RLC Pi Filter. They also have significant Johnson noise. 
     - Input low-pass has cutoff at 723 Hz. This is low but okay because it feeds a low freq analog supply. 
 
-### [Buck Converter]
+### Buck Converter
     - Main external circuitry
         - Input caps
         - Output LC filter - use below formula to calculate inductor value
