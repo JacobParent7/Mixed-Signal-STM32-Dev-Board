@@ -142,5 +142,6 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - NRST typically pulled high by internal 40k resistor. Route to SWD header for more control
     - BOOT0 on most STM32 uC. Tells chip to either run program flashed (low) or to listen for debug signals on UART or USB (high)
     - HSE_IN and HSE_OUT are our STM32 chips pins for an external crystal oscillator. Internal osc is okay for some applications, but not really accurate enough for UART or USB communication. 
+    - For more infor, find AN2867 design guide for crystal oscillators. 
 
 <img width="340" alt="Screenshot 2024-07-08 211210" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/64625600-abec-4d33-b82f-11d7694531cc">
