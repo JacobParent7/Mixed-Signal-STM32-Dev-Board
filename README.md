@@ -134,7 +134,13 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 <img width="339" alt="Screenshot 2024-07-08 205031" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/9264ed34-b8d7-43bb-84d7-65af0aa09342">
 
 ### MCU Analog Power Decoupling
-    - We do not nee to do this because we are using external DAC and ADC
+    - We do not need to do this because we are using external DAC and ADC
     - Below shows the datasheet implementation if this were not the case
 <img width="250" alt="Screenshot 2024-07-08 205635" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/e4ca3d28-7c24-4d12-b280-546f959446f2">
 
+### Config pins and Crystal Oscillator
+    - NRST typically pulled high by internal 40k resistor. Route to SWD header for more control
+    - BOOT0 on most STM32 uC. Tells chip to either run program flashed (low) or to listen for debug signals on UART or USB (high)
+    - HSE_IN and HSE_OUT are our STM32 chips pins for an external crystal oscillator. Internal osc is okay for some applications, but not really accurate enough for UART or USB communication. 
+
+<img width="340" alt="Screenshot 2024-07-08 211210" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/64625600-abec-4d33-b82f-11d7694531cc">
