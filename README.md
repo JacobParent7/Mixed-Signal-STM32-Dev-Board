@@ -132,3 +132,9 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - As recommended by the datasheet, we have a 100uF cap for each digital power input for a total of four caps
     - We also have on 10uF bulk decoupling cap, also recommended by the datasheet
 <img width="339" alt="Screenshot 2024-07-08 205031" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/9264ed34-b8d7-43bb-84d7-65af0aa09342">
+
+### MCU Analog Power Decoupling
+    - We do not nee to do this because we are using external DAC and ADC
+    - Below shows the datasheet implementation if this were not the case
+<img width="250" alt="Screenshot 2024-07-08 205635" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/e4ca3d28-7c24-4d12-b280-546f959446f2">
+
