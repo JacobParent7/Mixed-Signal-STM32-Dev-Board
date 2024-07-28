@@ -5,10 +5,10 @@
 	(uuid "c49d23ab-146d-4089-864f-2d22b5b414b9")
 	(paper "A4")
 	(title_block
-		(title "Mixed-Signal Demo PCB")
-		(date "2022-01-04")
+		(title "Mixed-Signal PCB")
+		(date "6-1-2024")
 		(rev "0.1")
-		(company "Phil's Lab")
+		(company "Jacob Parent")
 	)
 	(lib_symbols
 		(symbol "Mechanical:MountingHole"

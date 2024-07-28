@@ -5,9 +5,10 @@
 	(uuid "155b0b7c-70b4-4a26-a550-bac13cab0aa4")
 	(paper "A4")
 	(title_block
-		(title "Mixed-Signal Demo PCB")
+		(title "Mixed-Signal PCB")
+		(date "6-1-2024")
 		(rev "0.1")
-		(company "Phil's Lab")
+		(company "Jacob Parent")
 	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:MCP6001-OT"
@@ -650,7 +651,7 @@
 				)
 			)
 		)
-		(symbol "Device:R"
+		(symbol "Device:R_US"
 			(pin_numbers hide)
 			(pin_names
 				(offset 0)
@@ -659,15 +660,15 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "R"
-				(at 2.032 0 90)
+				(at 2.54 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "R"
-				(at 0 0 90)
+			(property "Value" "R_US"
+				(at -2.54 0 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -675,7 +676,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at -1.778 0 90)
+				(at 1.016 -0.254 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -692,7 +693,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Resistor"
+			(property "Description" "Resistor, US symbol"
 				(at 0 0 0)
 				(effects
 					(font
@@ -719,12 +720,61 @@
 					(hide yes)
 				)
 			)
-			(symbol "R_0_1"
-				(rectangle
-					(start -1.016 -2.54)
-					(end 1.016 2.54)
+			(symbol "R_US_0_1"
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
+					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.762) (xy 1.016 0.381) (xy 0 0) (xy -1.016 -0.381) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -732,7 +782,7 @@
 					)
 				)
 			)
-			(symbol "R_1_1"
+			(symbol "R_US_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -3882,7 +3932,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 91.44 60.96 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3907,7 +3957,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 91.44 59.182 90)
+			(at 91.186 61.976 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3924,7 +3974,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 91.44 60.96 0)
 			(effects
 				(font
@@ -4359,7 +4409,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 220.98 62.23 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4386,7 +4436,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 222.758 62.23 90)
+			(at 219.964 61.976 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4403,7 +4453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 220.98 62.23 0)
 			(effects
 				(font
@@ -4428,7 +4478,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 220.98 72.39 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4455,7 +4505,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 222.758 72.39 90)
+			(at 219.964 72.136 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4472,7 +4522,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 220.98 72.39 0)
 			(effects
 				(font
@@ -4846,7 +4896,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 148.59 118.11 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4873,7 +4923,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 150.368 118.11 90)
+			(at 147.574 117.856 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4890,7 +4940,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 148.59 118.11 0)
 			(effects
 				(font
@@ -5050,7 +5100,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 148.59 132.08 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5077,7 +5127,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 150.368 132.08 90)
+			(at 147.574 131.826 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5094,7 +5144,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 148.59 132.08 0)
 			(effects
 				(font
@@ -5321,7 +5371,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
+		(lib_id "Device:R_US")
 		(at 191.77 118.11 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5348,7 +5398,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 193.548 118.11 90)
+			(at 190.754 117.856 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5365,7 +5415,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor, US symbol"
 			(at 191.77 118.11 0)
 			(effects
 				(font
