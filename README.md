@@ -146,3 +146,20 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - For more info on calculating load caps, find AN2867 design guide for crystal oscillators. 
 
 <img width="340" alt="Screenshot 2024-07-08 211210" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/64625600-abec-4d33-b82f-11d7694531cc">
+
+## Microcontroller pin layout
+    - The datasheet for any given uC will specify what functions the uC pins can serve. However, we can take advantage of the STM32 Cube IDE to do this for us and save time
+### Pin layout description
+    - Under SYS, set up serial wire debug for communication. Choose trace asynchronous Sw for live plotting or monitoring.
+    - Under RCC, choose HSE to be crystal resonator for external circuitry
+    - Under TIM, we can choose timer channels for PWM generation for LEDs. 
+    - Under connectivity, set up receiving and transmitting master SPI channels for ADC and DAC. Choose check box under USB for full speed USB.
+    
+![image](https://github.com/user-attachments/assets/78c875ef-ba2b-4a0c-9837-d6d11c709275)
+
+### Moving to KiCAD
+    - Once you choose the desired pin configuration in Cube IDE, move back to KiCAD and map pins to schematic symbol shown below
+    - Add pull up resistors on SPI hardware and chip select lines (not necessary if driven by GPIO), however, we are using hardware chip select pin from SPI drivers
+    - On USB diff pair, name + and - to tell KiCAD to map as diff pair.
+    - Check application note for STM32F1 to see if embededded pullup is included on D+ line. When we check our application note, we can see that an external 1.5 KOhm pullup is required.
+![image](https://github.com/user-attachments/assets/e7230750-cc78-4dd9-8f6e-afe2b30f4e17)
