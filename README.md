@@ -147,7 +147,7 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 
 <img width="340" alt="Screenshot 2024-07-08 211210" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/64625600-abec-4d33-b82f-11d7694531cc">
 
-## Microcontroller pin layout
+## Microcontroller Pin Layout
     - The datasheet for any given uC will specify what functions the uC pins can serve. However, we can take advantage of the STM32 Cube IDE to do this for us and save time
 ### Pin layout description
     - Under SYS, set up serial wire debug for communication. Choose trace asynchronous Sw for live plotting or monitoring.
