@@ -204,4 +204,5 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - SWO is an optional signal (trace line from earlier) which allows us to trace output in real time
     - NRST is a pin that if pulled low triggers a hard reset
 
-![image](https://github.com/user-attachments/assets/2ca20187-ccbd-4ad6-bf93-2acc30de30d9)
+![image](https://github.com/user-attachments/assets/768faf53-2171-47f7-aa8c-a10c581739b3)
+
