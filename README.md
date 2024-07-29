@@ -163,3 +163,45 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - On USB diff pair, name + and - to tell KiCAD to map as diff pair.
     - Check application note for STM32F1 to see if embededded pullup is included on D+ line. When we check our application note, we can see that an external 1.5 KOhm pullup is required.
 ![image](https://github.com/user-attachments/assets/e7230750-cc78-4dd9-8f6e-afe2b30f4e17)
+
+## USB, RGB LED, and SWD header
+
+### RGB LED
+    - simple 1k current limiting resistors, chosen mostly for BOM consolidation since we are driving using PWM
+    - decoupling capacitor since the LEDs are driven by PWM
+
+![image](https://github.com/user-attachments/assets/1c62febd-3adf-40a8-999b-5aa16a218081)
+
+### USB connector
+    - Power and data connections are main 
+    - USB C has more pins than typical USB A
+    - Read AN4879 application note for specefics on USB layout
+    - Supply is noisy, so use a filter like a Pi Filter and RLC filter (seen in PSU section above) 
+    - Add ESD protection with low capacitance since we are using a relatively high bandwidth 
+    - Data line filtering via common-mode choke will reduce signal integrity but improve EMC performance (not really needed for USB 2.0)
+#### USB Type C specifics
+    - TA0357 application note from ST
+    - Instead of drawing 5V at 5mA, we can use a type C power delivery IC and get 100W (5A at 20 V). This is not required for our project.
+    - Tell host we want to draw power by having seperate 5.1k pulldown resistors on CC1 and CC2 pins, where CC stands for configuration channel (Make sure to use two seperate resistors!)
+#### Common mode choke specifics
+    - Choke must be rated for USB 2 frequency range and not impede too much
+    - Choke will have a differential impedance which must match the USB bus impedance (90 Ohm)
+#### Specify signal path for readability 
+    - Connector -> ESD -> CM Choke -> Pull-Up -> MCU
+
+![image](https://github.com/user-attachments/assets/f449183e-5e5d-4832-922a-a74a124008ef)
+
+### SWD Header
+    - Look up SWD pinout on google for easy specification
+    - SWD is a simple in-circuit debugging and programming method that requires only data and clock lines
+    - ST uses ST-Link to make debugging very easy 
+    - Include bi-directional TVS diodes on signal lines for protection 
+    - Low-pass filter included on NRST line to prevent unwanted resets due to high frequency noise
+#### SWD signals explained
+    - Main signals are SWDIO and SWCLK
+    - SWDIO is bidirectional data
+    - SWCLK is clock signal 
+    - SWO is an optional signal (trace line from earlier) which allows us to trace output in real time
+    - NRST is a pin that if pulled low triggers a hard reset
+
+![image](https://github.com/user-attachments/assets/2ca20187-ccbd-4ad6-bf93-2acc30de30d9)
