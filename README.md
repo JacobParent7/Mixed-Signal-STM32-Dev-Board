@@ -207,3 +207,12 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 ![image](https://github.com/user-attachments/assets/768faf53-2171-47f7-aa8c-a10c581739b3)
 
 ## ADC & Analog Front End
+
+### ADC IC
+    - ADC schematic follows design suggestion from datasheet
+    - Seperate Bulk decoupling caps for analog and digital power (use similar caps for BOM consolidation)
+    - Shared ground (not good idea to split mixed signal ground)
+    - Clock signal has 0 Ohm resistor. Series resistor may reduce EMI and ringing (replace with 22 Ohm for example)
+    - Dedicated 3.3V analog reference (U3D2) significantly improves ADC accuracy 
+    - PI network used to filter noisy 5V bus from USB. Choose resisitor wisely based on current sink from analog reference. 
+![ADC](https://github.com/user-attachments/assets/312b91e6-bdef-4015-b928-40324ae60d92)
