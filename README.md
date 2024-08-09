@@ -206,3 +206,4 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 
 ![image](https://github.com/user-attachments/assets/768faf53-2171-47f7-aa8c-a10c581739b3)
 
+## ADC & Analog Front End
