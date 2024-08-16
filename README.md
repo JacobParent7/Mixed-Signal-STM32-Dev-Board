@@ -146,3 +146,40 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - For more info on calculating load caps, find AN2867 design guide for crystal oscillators. 
 
 <img width="340" alt="Screenshot 2024-07-08 211210" src="https://github.com/JacobParent7/Mixed-Signal-STM32-Dev-Board/assets/105901480/64625600-abec-4d33-b82f-11d7694531cc">
+
+
+## PCB Layout Specifications
+
+### PCB Stack-Up
+    - SIG | GND | VCC | SIG
+        - Easier for routing
+    - SIG | GND | GND | SIG
+        - Energy flows in dielectric between waveguiding copper. Therefore, this setup gives minimal return pad length for signals (single-ended) on both sides. 
+        - Routing power through traces is not really a problem for an audio frequency design 
+### Trace size rule of thumb    
+    - 0.5mm for power
+    - 0.3mm for signal
+    - Spacing: 3x dielectric thickness to help with crosstalk noise
+    - Always minimise length and maximize spacing
+
+### Controlled impedance traces
+    - Need to consider if rise/fall times of digital signals or highest frequency of analog signals are comparable to the propagation lengths of the PCB traces
+    - High speed digital bus (USB, PCIe,...) and RF should always be routed as controlled impedance
+    - We control impedances to match the impedance of the driver and receiver to minimize reflections
+    - Trace impedance is approximated by inductance and capacitance of trace
+        - Inductance has to do with the area of the loop
+        - Capacitance has to do with the suface area
+    - Use PCB fab calulator to find width for microstrip and diff pair traces
+
+![image](https://github.com/user-attachments/assets/5f2b01f3-996e-43ac-9c2d-fc14ef14fd3d)
+
+![image](https://github.com/user-attachments/assets/289ec0df-73de-4adc-b2c8-30af6f83aa59)
+
+
+
+### Via Sizing
+    - Small: 0.45mm pad with 0.25mm drill
+    - Mediumn: 0.7mm pad with 0.3mm drill
+    - Large: 0.8mm pad with 0.4mm drill
+    - Use medium if possible for best cost 
+    - Large is good for higher currents and small if contrained for space
