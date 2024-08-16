@@ -4784,7 +4784,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PhilsLab_Footprints_KiCad6:MWSA0603S"
+		(property "Footprint" "Inductor_SMD:L_Sunlord_MWSA0603S"
 			(at 119.38 111.76 0)
 			(effects
 				(font

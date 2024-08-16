@@ -3622,7 +3622,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PhilsLab_Footprints_KiCad6:VSSOP-10"
+		(property "Footprint" "MixedSignalBoardParts:SOIC-10"
 			(at 130.81 156.21 0)
 			(effects
 				(font
@@ -6375,7 +6375,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PhilsLab_Footprints_KiCad6:AMPHENOL-BNC-031-5640-1010"
+		(property "Footprint" "MixedSignalBoardParts:BNC"
 			(at 45.72 62.23 0)
 			(effects
 				(font
@@ -6384,7 +6384,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" " ~"
+		(property "Datasheet" "~"
 			(at 45.72 62.23 0)
 			(effects
 				(font
