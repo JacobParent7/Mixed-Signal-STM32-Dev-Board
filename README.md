@@ -195,8 +195,9 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 ### ADC
     - ADC chip itself has and analog and digital side. We will use this to seperate the remainder of the layout
     - In general, keep loops as short as possible
-    - Decoupling as close to IC as poossible
+    - Decoupling as close to IC as possible
     - Try to keep a clean signal line to eliminate stubs
+    - Compressed diff pair into t shape which decreased coupling. This is fine because it's really a pseudo diff pair
     
 ![image](https://github.com/user-attachments/assets/b3f5cbc9-2d5e-4210-9296-7def077a2332)
 
