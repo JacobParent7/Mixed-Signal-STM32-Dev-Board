@@ -183,3 +183,12 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - Large: 0.8mm pad with 0.4mm drill
     - Use medium if possible for best cost 
     - Large is good for higher currents and small if contrained for space
+
+## PCB Layout
+
+### MCU
+    - Keep decoupling caps as close to associated pins as possible
+    - Pullups and downs can be put pretty much anywhere. Put in line with uC pin
+    - Crystal oscillator should be kept away from switching components like the PSU
+![image](https://github.com/user-attachments/assets/6f6d2476-94e8-48a8-8dd6-49177baed28b)
+
