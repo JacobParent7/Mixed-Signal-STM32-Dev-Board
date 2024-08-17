@@ -201,3 +201,12 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     
 ![image](https://github.com/user-attachments/assets/b3f5cbc9-2d5e-4210-9296-7def077a2332)
 
+### DAC    
+    - DAC is simply just follow same layout as ADC for recontruction filter
+
+### Linear and Switching PSU
+    - Follow datasheets for ICs
+
+### Rough Draft Layout Render
+
+![Nemesis-MixSigPCB](https://github.com/user-attachments/assets/90d80ca0-7114-4520-aff8-8c4a1b04e736)
