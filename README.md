@@ -192,3 +192,11 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - Crystal oscillator should be kept away from switching components like the PSU
 ![image](https://github.com/user-attachments/assets/6f6d2476-94e8-48a8-8dd6-49177baed28b)
 
+### ADC
+    - ADC chip itself has and analog and digital side. We will use this to seperate the remainder of the layout
+    - In general, keep loops as short as possible
+    - Decoupling as close to IC as poossible
+    - Try to keep a clean signal line to eliminate stubs
+    
+![image](https://github.com/user-attachments/assets/b3f5cbc9-2d5e-4210-9296-7def077a2332)
+
