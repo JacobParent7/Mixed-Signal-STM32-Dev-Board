@@ -318,3 +318,20 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 ### Rough Draft Layout Render
 
 ![Nemesis-MixSigPCB](https://github.com/user-attachments/assets/90d80ca0-7114-4520-aff8-8c4a1b04e736)
+
+### Final Layout
+
+    - 5V and 3.3 Power were routed last and planned mostly on the back
+    - GND Via inlcuded for every signal or power via since we are using the board build up previously mentioned with 2 GND planes. This reduces EMI. 
+    - All signals were routed as 50 Ohms controlled impedance which was 0.29mm. All power traces were 0.5mm
+    - Diff pair was routed as .21 mm as calculated on expected manufacturers website. 
+    - Digital and Analog portions were kept as far apart as possible
+    - Use polygons instead of traces to connect Power that is near each other. 
+
+![image](https://github.com/user-attachments/assets/8eb5c98c-c238-4f0f-91b1-2a544e90c0ab)
+
+### What is left?
+    - Sticthing vias
+    - Cleaner Routing
+    - Silkscreen
+    - Prepare for manufacturing
