@@ -335,3 +335,9 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
     - Cleaner Routing
     - Silkscreen
     - Prepare for manufacturing
+
+### Final 3D Render
+
+![Nemesis-MixSigPCB_Final](https://github.com/user-attachments/assets/0f1d0279-738b-4bab-a55d-9c0b2b5a75ea)
+
+
