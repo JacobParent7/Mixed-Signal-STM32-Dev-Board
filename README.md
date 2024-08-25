@@ -4,7 +4,7 @@ This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fede
 
 Thank you to PCBWay for sponsoring the PCB fabrication and assembly for this complex mixed-signal board! 
 
-Check our teir services at https://www.pcbway.com/
+Check our their services at https://www.pcbway.com/
 
 ![0x0-2426178651](https://github.com/user-attachments/assets/273d90e7-524b-4b6e-b75d-2a452df8a5e7)
 
