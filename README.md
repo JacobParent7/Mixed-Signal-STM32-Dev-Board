@@ -2,6 +2,13 @@
 
 This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fedevel.com/courses/mixed-signal-hardware-design-with-kicad) 4-layer PCB design course instructed by Philip Salmony of the Phil's Lab youtube channel.  
 
+Thank you to PCBWay for sponsoring the PCB fabrication and assembly for this complex mixed-signal board! 
+
+Check our teir services at https://www.pcbway.com/
+
+![0x0-2426178651](https://github.com/user-attachments/assets/273d90e7-524b-4b6e-b75d-2a452df8a5e7)
+
+
 ## System Level Description
 ### Basic Requirements
     - USB powered, single channel, low frequency analysis and generation capabilities
