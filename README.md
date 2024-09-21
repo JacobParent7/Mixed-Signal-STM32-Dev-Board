@@ -347,4 +347,11 @@ Check our their services at https://www.pcbway.com/
 
 ![Nemesis-MixSigPCB_Final](https://github.com/user-attachments/assets/0f1d0279-738b-4bab-a55d-9c0b2b5a75ea)
 
+### Final Manufactured and Assembled PCB
+    - Thanks to PCBWay for this flawless PCB. Throughout the manufacturing process, the engineers
+    at PCBWay found a few errors in my design which were fixed for no extra cost. The process was quick 
+    and I received the PCB soon after placing my order. 
+
+![IMG_20240921_122540](https://github.com/user-attachments/assets/5c5f37fa-9c0d-4f75-87f2-82af46e16aa6)
+
 
