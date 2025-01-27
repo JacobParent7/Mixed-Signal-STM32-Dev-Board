@@ -1,3 +1,5 @@
+![untitled](https://github.com/user-attachments/assets/db2c18d8-a7ce-4588-82fa-213fa361f39a)
+
 # Mixed-Signal-STM32-Dev-Board
 
 This project follows the  [Mixed-Signal Hardware Design with KiCad](https://fedevel.com/courses/mixed-signal-hardware-design-with-kicad) 4-layer PCB design course instructed by Philip Salmony of the Phil's Lab youtube channel.  
